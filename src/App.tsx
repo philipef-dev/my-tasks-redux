@@ -1,5 +1,14 @@
+import BarraLateral from './container/BarraLateral'
+import ListaDeTarefas from './container/ListaDeTarefas'
+import { Container } from './styles'
+
 function App() {
-  return <h2>Olá React.js </h2>
+  return (
+    <Container>
+      <BarraLateral />
+      <ListaDeTarefas />
+    </Container>
+  )
 }
 
 export default App
