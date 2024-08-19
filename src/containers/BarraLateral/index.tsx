@@ -3,14 +3,14 @@ import * as S from './styles'
 
 const BarraLateral = () => (
   <S.Aside>
-    <input type="text" placeholder="Buscar" />
+    <S.Campo type="text" placeholder="Procurar" />
     <S.Filtros>
       <FiltroCard />
       <FiltroCard />
+      <FiltroCard ativo />
       <FiltroCard />
       <FiltroCard />
-      <FiltroCard />
-      <FiltroCard />
+      <FiltroCard ativo />
     </S.Filtros>
   </S.Aside>
 )
