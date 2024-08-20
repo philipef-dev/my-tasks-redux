@@ -5,12 +5,12 @@ const BarraLateral = () => (
   <S.Aside>
     <S.Campo type="text" placeholder="Procurar" />
     <S.Filtros>
-      <FiltroCard />
-      <FiltroCard />
-      <FiltroCard ativo />
-      <FiltroCard />
-      <FiltroCard />
-      <FiltroCard ativo />
+      <FiltroCard contador="3" status="pendentes" />
+      <FiltroCard contador="4" status="concluídas" />
+      <FiltroCard contador="2" status="urgentes" ativo />
+      <FiltroCard contador="2" status="importantes" />
+      <FiltroCard contador="3" status="normal" />
+      <FiltroCard contador="7" status="todas" ativo />
     </S.Filtros>
   </S.Aside>
 )

@@ -1,7 +1,11 @@
+import Tarefas from '../../components/Tarefas'
+
 const ListaDeTarefas = () => {
   return (
     <main>
-      <p>2 tarefas narcadas como: &quot;categoria&quot; e &quot;termo&quot;</p>
+      <Tarefas />
+      <Tarefas />
+      <Tarefas />
     </main>
   )
 }
