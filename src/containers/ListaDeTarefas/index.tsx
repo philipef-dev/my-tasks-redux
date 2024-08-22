@@ -19,13 +19,13 @@ const listaDeTarefas = [
     titulo: 'Camisas e perfumes comprados mês de agosto',
     prioridade: 'normal',
     status: 'concluído',
-    descricao: 'Fazer os projetos finais e curso de mentoria de carreira'
+    descricao: 'Aquele investiment pessoal necessário'
   },
   {
-    titulo: 'Juntar dinheiro para pagar o curso da Ebac',
-    prioridade: 'pendente',
-    status: 'importante',
-    descricao: 'Fazer os projetos finais do curso e da mentoria de carreira'
+    titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
+    prioridade: 'importante',
+    status: 'pendente',
+    descricao: 'Deixar o carro pronto para venda se possível'
   }
 ]
 
