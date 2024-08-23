@@ -23,7 +23,7 @@ const listaDeTarefas = [
   },
   {
     titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
-    prioridade: 'importante',
+    prioridade: 'urgente',
     status: 'pendente',
     descricao: 'Deixar o carro pronto para venda se possível'
   }

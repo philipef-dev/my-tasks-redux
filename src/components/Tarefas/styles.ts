@@ -10,8 +10,8 @@ export const Card = styled.div`
 `
 
 type TagProps = {
-  prioridade?: string
   status?: string
+  prioridade?: string
 }
 
 function retornaCordeFundo({ status, prioridade }: TagProps) {
