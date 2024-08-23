@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
+import * as enums from '../../utils/enums/tarefa'
 
 export const Card = styled.div`
   padding: 16px;
@@ -10,24 +11,24 @@ export const Card = styled.div`
 `
 
 type TagProps = {
-  status?: string
-  prioridade?: string
+  status?: enums.Status
+  prioridade?: enums.Prioridade
 }
 
 function retornaCordeFundo({ status, prioridade }: TagProps) {
-  if (status === 'pendente') {
+  if (status === enums.Status.PENDENNTE) {
     return variaveis.pendente
   }
 
-  if (status === 'concluido') {
+  if (status === enums.Status.CONCLUIDA) {
     return variaveis.green
   }
 
-  if (prioridade === 'importante') {
+  if (prioridade === enums.Prioridade.IMPORTANTE) {
     return variaveis.important
   }
 
-  if (prioridade === 'urgente') {
+  if (prioridade === enums.Prioridade.URGENTE) {
     return variaveis.red
   }
   return '#ccc'
