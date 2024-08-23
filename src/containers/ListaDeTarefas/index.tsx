@@ -4,21 +4,21 @@ import Tarefas from '../../components/Tarefas'
 const listaDeTarefas = [
   {
     titulo: 'Terminar o curso da Ebac de Engenheiro Front-End',
-    prioridade: 'pendente',
-    status: 'importante',
+    prioridade: 'importante',
+    status: 'pendente',
     descricao: 'Fazer os projetos finais e curso de mentoria de carreira'
   },
   {
     titulo: 'Juntar dinheiro para pagar o curso da Ebac',
-    prioridade: 'pendente',
-    status: 'concluído',
+    prioridade: 'importante',
+    status: 'pendente',
     descricao:
       'Trabalhar neste próximo final de semana sabado e domingo e juntar 230 reais '
   },
   {
     titulo: 'Camisas e perfumes comprados mês de agosto',
     prioridade: 'normal',
-    status: 'concluído',
+    status: 'concluido',
     descricao: 'Aquele investiment pessoal necessário'
   },
   {

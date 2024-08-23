@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Card = styled.div`
   padding: 16px;
@@ -8,15 +9,39 @@ export const Card = styled.div`
   border-radius: 0px 0px 16px 16px;
 `
 
+type TagProps = {
+  prioridade?: string
+  status?: string
+}
+
+function retornaCordeFundo({ status, prioridade }: TagProps) {
+  if (status === 'pendente') {
+    return variaveis.pendente
+  }
+
+  if (status === 'concluido') {
+    return variaveis.green
+  }
+
+  if (prioridade === 'importante') {
+    return variaveis.important
+  }
+
+  if (prioridade === 'urgente') {
+    return variaveis.red
+  }
+  return '#ccc'
+}
+
 export const Titulo = styled.h3`
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 14px;
 `
-export const Span = styled.span`
+export const Tag = styled.span<TagProps>`
   padding: 4px 8px;
   border-radius: 8px;
-  background-color: #e1a32a;
+  background-color: ${(props) => retornaCordeFundo(props)};
   font-size: 10px;
   font-weight: 700;
   margin-right: 16px;
@@ -55,4 +80,18 @@ export const Button = styled.button`
   margin-right: 8px;
   color: #fff;
   cursor: pointer;
+`
+
+export const ButtonSave = styled(Button)`
+  background-color: ${variaveis.green};
+`
+export const ButtonRed = styled(Button)`
+  background-color: ${variaveis.red};
+`
+export const ButtonPendente = styled(Button)`
+  background-color: ${variaveis.pendente};
+`
+
+export const ButtonImportant = styled(Button)`
+  background-color: ${variaveis.important};
 `

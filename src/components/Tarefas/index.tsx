@@ -16,14 +16,16 @@ const Tarefas = ({ titulo, prioridade, status, descricao }: Props) => {
       <S.Titulo>
         <input type="checkbox" /> {titulo}
       </S.Titulo>
-      <S.Span>{prioridade}</S.Span>
-      <S.Span>{status}</S.Span>
+      <S.Tag prioridade={prioridade}>{prioridade}</S.Tag>
+      <S.Tag status={status}>{status}</S.Tag>
       <S.Descricao value={descricao} />
       <S.BarraAcoes>
         {editarTarefa ? (
           <>
-            <S.Button>Salvar</S.Button>
-            <S.Button onClick={() => setEditarTarefa(false)}>Cancelar</S.Button>
+            <S.ButtonSave>Salvar</S.ButtonSave>
+            <S.ButtonRed onClick={() => setEditarTarefa(false)}>
+              Cancelar
+            </S.ButtonRed>
           </>
         ) : (
           <>
@@ -34,7 +36,7 @@ const Tarefas = ({ titulo, prioridade, status, descricao }: Props) => {
             >
               Editar
             </S.Button>
-            <S.Button>Remover</S.Button>
+            <S.ButtonRed>Remover</S.ButtonRed>
           </>
         )}
       </S.BarraAcoes>
