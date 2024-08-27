@@ -4,20 +4,20 @@ import * as enums from '../../utils/enums/tarefa'
 
 const listaDeTarefas = [
   {
-    titulo: 'Terminar o curso da Ebac de Engenheiro Front-End',
-    prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENNTE,
-    descricao: 'Fazer os projetos finais e curso de mentoria de carreira'
-  },
-  {
-    titulo: 'Juntar dinheiro para pagar o curso da Ebac',
+    titulo: 'Terminar o teste tecnico da LiveCode',
     prioridade: enums.Prioridade.IMPORTANTE,
     status: enums.Status.PENDENNTE,
     descricao:
-      'Trabalhar neste próximo final de semana sabado e domingo e juntar 230 reais '
+      'Realizar o teste utilizaando redux para controle de estados e stylede componenets para estilização.'
   },
   {
-    titulo: 'Camisas e perfumes comprados mês de agosto',
+    titulo: 'Finalizar o Resumo da aula sobre Redux',
+    prioridade: enums.Prioridade.IMPORTANTE,
+    status: enums.Status.PENDENNTE,
+    descricao: 'Assistir a aulas novamento e fazendo  anotações'
+  },
+  {
+    titulo: 'Camisas e perfumes comprados no mês de agosto',
     prioridade: enums.Prioridade.NORMAL,
     status: enums.Status.CONCLUIDA,
     descricao: 'Aquele investiment pessoal necessário'
