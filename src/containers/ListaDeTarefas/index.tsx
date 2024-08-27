@@ -1,36 +1,11 @@
 import * as S from './styles'
 import Tarefas from '../../components/Tarefas'
-import * as enums from '../../utils/enums/tarefa'
-
-const listaDeTarefas = [
-  {
-    titulo: 'Terminar o teste tecnico da LiveCode',
-    prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENTE,
-    descricao:
-      'Realizar o teste utilizaando redux para controle de estados e stylede componenets para estilização.'
-  },
-  {
-    titulo: 'Finalizar o Resumo da aula sobre Redux',
-    prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENTE,
-    descricao: 'Assistir a aulas novamento e fazendo  anotações'
-  },
-  {
-    titulo: 'Camisas e perfumes comprados no mês de agosto',
-    prioridade: enums.Prioridade.NORMAL,
-    status: enums.Status.CONCLUIDA,
-    descricao: 'Aquele investiment pessoal necessário'
-  },
-  {
-    titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
-    prioridade: enums.Prioridade.URGENTE,
-    status: enums.Status.PENDENTE,
-    descricao: 'Deixar o carro pronto para venda se possível'
-  }
-]
+import { useSelector } from 'react-redux'
+import { RootState } from '../../store'
 
 const ListaDeTarefas = () => {
+  const listaDeTarefas = useSelector((state: RootState) => state.tarefa)
+
   return (
     <S.Container>
       <S.Titulo>

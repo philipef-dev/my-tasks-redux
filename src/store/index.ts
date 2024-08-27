@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
+import tarefasReducers from './reducers/tarefa'
 
-const store = configureStore({
-  reducer: {}
+export const store = configureStore({
+  reducer: {
+    tarefa: tarefasReducers
+  }
 })
 
 export type RootState = ReturnType<typeof store.getState>
