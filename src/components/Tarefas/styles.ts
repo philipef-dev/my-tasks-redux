@@ -16,7 +16,7 @@ type TagProps = {
 }
 
 function retornaCordeFundo({ status, prioridade }: TagProps) {
-  if (status === enums.Status.PENDENNTE) {
+  if (status === enums.Status.PENDENTE) {
     return variaveis.pendente
   }
 

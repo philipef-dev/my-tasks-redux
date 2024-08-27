@@ -6,14 +6,14 @@ const listaDeTarefas = [
   {
     titulo: 'Terminar o teste tecnico da LiveCode',
     prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENNTE,
+    status: enums.Status.PENDENTE,
     descricao:
       'Realizar o teste utilizaando redux para controle de estados e stylede componenets para estilização.'
   },
   {
     titulo: 'Finalizar o Resumo da aula sobre Redux',
     prioridade: enums.Prioridade.IMPORTANTE,
-    status: enums.Status.PENDENNTE,
+    status: enums.Status.PENDENTE,
     descricao: 'Assistir a aulas novamento e fazendo  anotações'
   },
   {
@@ -25,7 +25,7 @@ const listaDeTarefas = [
   {
     titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
     prioridade: enums.Prioridade.URGENTE,
-    status: enums.Status.PENDENNTE,
+    status: enums.Status.PENDENTE,
     descricao: 'Deixar o carro pronto para venda se possível'
   }
 ]
