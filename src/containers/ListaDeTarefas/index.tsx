@@ -1,7 +1,7 @@
-import * as S from './styles'
-import Tarefas from '../../components/Tarefas'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store'
+import Tarefas from '../../components/Tarefas'
+import * as S from './styles'
 
 const ListaDeTarefas = () => {
   const listaDeTarefas = useSelector((state: RootState) => state.tarefa)
@@ -13,7 +13,7 @@ const ListaDeTarefas = () => {
       </S.Titulo>
       <S.ListaDeTarefas>
         <ul>
-          {listaDeTarefas.map((t) => (
+          {listaDeTarefas.itens.map((t) => (
             <li key={t.titulo}>
               <Tarefas
                 id={t.id}
