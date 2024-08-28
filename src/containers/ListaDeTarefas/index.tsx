@@ -16,6 +16,7 @@ const ListaDeTarefas = () => {
           {listaDeTarefas.map((t) => (
             <li key={t.titulo}>
               <Tarefas
+                id={t.id}
                 titulo={t.titulo}
                 status={t.status}
                 descricao={t.descricao}
