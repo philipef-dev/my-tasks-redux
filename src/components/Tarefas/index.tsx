@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { remover } from '../../store/reducers/tarefa'
+import { remover, editar } from '../../store/reducers/tarefa'
 import TarefaClass from '../../models/Tarefa'
 import * as S from './styles'
 
@@ -29,6 +29,19 @@ const Tarefas = ({
     setEditarTarefa(false)
   }
 
+  function editando() {
+    dispatch(
+      editar({
+        descricao,
+        id,
+        status,
+        prioridade,
+        titulo
+      })
+    )
+    setEditarTarefa(false)
+  }
+
   return (
     <S.Card>
       <S.Titulo>
@@ -44,7 +57,7 @@ const Tarefas = ({
       <S.BarraAcoes>
         {editarTarefa ? (
           <>
-            <S.ButtonSave>Salvar</S.ButtonSave>
+            <S.ButtonSave onClick={editando}>Salvar</S.ButtonSave>
             <S.ButtonRed onClick={cancelarEdicao}>Cancelar</S.ButtonRed>
           </>
         ) : (
