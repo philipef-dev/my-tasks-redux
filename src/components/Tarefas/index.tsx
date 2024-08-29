@@ -29,7 +29,7 @@ const Tarefas = ({
     setEditarTarefa(false)
   }
 
-  function editando() {
+  function editandoTarefa() {
     dispatch(
       editar({
         descricao,
@@ -57,7 +57,7 @@ const Tarefas = ({
       <S.BarraAcoes>
         {editarTarefa ? (
           <>
-            <S.ButtonSave onClick={editando}>Salvar</S.ButtonSave>
+            <S.ButtonSave onClick={editandoTarefa}>Salvar</S.ButtonSave>
             <S.ButtonRed onClick={cancelarEdicao}>Cancelar</S.ButtonRed>
           </>
         ) : (
