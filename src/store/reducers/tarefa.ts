@@ -2,33 +2,42 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Tarefa from '../../models/Tarefa'
 import * as enums from '../../utils/enums/tarefa'
 
+type TarefaState = {
+  itens: Tarefa[]
+}
+
+const initialState: TarefaState = {
+  itens: [
+    {
+      titulo: 'Terminar o teste tecnico da LiveCode',
+      prioridade: enums.Prioridade.IMPORTANTE,
+      status: enums.Status.PENDENTE,
+      descricao:
+        'Realizar o teste utilizando redux para controle de estados e stylede componenets para estilização.',
+      id: 1
+    },
+
+    {
+      titulo: 'Finalizar o Resumo da aula sobre Redux',
+      prioridade: enums.Prioridade.IMPORTANTE,
+      status: enums.Status.PENDENTE,
+      descricao: 'Assistir a aulas novamento e fazendo  anotações.',
+      id: 2
+    },
+    {
+      titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
+      prioridade: enums.Prioridade.URGENTE,
+      status: enums.Status.PENDENTE,
+      descricao:
+        'Deixar o carro pronto para venda se possível documento ok, manutenção ok.',
+      id: 3
+    }
+  ]
+}
+
 const tarefaSlice = createSlice({
   name: 'tarefas',
-  initialState: {
-    itens: [
-      new Tarefa(
-        'Terminar o teste tecnico da LiveCode',
-        enums.Prioridade.IMPORTANTE,
-        enums.Status.PENDENTE,
-        'Realizar o teste utilizando redux para controle de estados e stylede componenets para estilização.',
-        1
-      ),
-      new Tarefa(
-        'Finalizar o Resumo da aula sobre Redux',
-        enums.Prioridade.IMPORTANTE,
-        enums.Status.PENDENTE,
-        'Assistir a aulas novamento e fazendo  anotações.',
-        2
-      ),
-      new Tarefa(
-        'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
-        enums.Prioridade.URGENTE,
-        enums.Status.PENDENTE,
-        'Deixar o carro pronto para venda se possível documento ok, manutenção ok.',
-        3
-      )
-    ]
-  },
+  initialState,
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
       state.itens = state.itens.filter((tarefa) => tarefa.id !== action.payload)

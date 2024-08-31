@@ -47,8 +47,8 @@ const Tarefas = ({
       <S.Titulo>
         <input type="checkbox" /> {titulo}
       </S.Titulo>
-      <S.Tag prioridade={prioridade}>{prioridade}</S.Tag>
-      <S.Tag status={status}>{status}</S.Tag>
+      <S.Tag $prioridade={prioridade}>{prioridade}</S.Tag>
+      <S.Tag $status={status}>{status}</S.Tag>
       <S.Descricao
         disabled={!editarTarefa}
         value={descricao}

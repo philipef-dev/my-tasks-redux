@@ -11,24 +11,24 @@ export const Card = styled.div`
 `
 
 type TagProps = {
-  status?: enums.Status
-  prioridade?: enums.Prioridade
+  $status?: enums.Status
+  $prioridade?: enums.Prioridade
 }
 
-function retornaCordeFundo({ status, prioridade }: TagProps) {
-  if (status === enums.Status.PENDENTE) {
+function retornaCordeFundo({ $status, $prioridade }: TagProps) {
+  if ($status === enums.Status.PENDENTE) {
     return variaveis.pendente
   }
 
-  if (status === enums.Status.CONCLUIDA) {
+  if ($status === enums.Status.CONCLUIDA) {
     return variaveis.green
   }
 
-  if (prioridade === enums.Prioridade.IMPORTANTE) {
+  if ($prioridade === enums.Prioridade.IMPORTANTE) {
     return variaveis.important
   }
 
-  if (prioridade === enums.Prioridade.URGENTE) {
+  if ($prioridade === enums.Prioridade.URGENTE) {
     return variaveis.red
   }
   return '#ccc'
