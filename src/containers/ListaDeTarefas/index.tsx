@@ -4,16 +4,25 @@ import Tarefas from '../../components/Tarefas'
 import * as S from './styles'
 
 const ListaDeTarefas = () => {
-  const listaDeTarefas = useSelector((state: RootState) => state.tarefa)
+  const listaDeTarefas = useSelector((state: RootState) => state.tarefa.itens)
+
+  const { termo } = useSelector((state: RootState) => state.filtro)
+
+  const filtrarTarefas = () => {
+    return listaDeTarefas.filter(
+      (tarefa) =>
+        tarefa.titulo.toLocaleLowerCase().search(termo.toLocaleLowerCase()) >= 0
+    )
+  }
 
   return (
     <S.Container>
       <S.Titulo>
-        2 tarefas marcadas como: &quot; todas &quot; e &quot; termo &quot;
+        2 tarefas marcadas como: &quot; todas &quot; e &quot; {termo} &quot;
       </S.Titulo>
       <S.ListaDeTarefas>
         <ul>
-          {listaDeTarefas.itens.map((t) => (
+          {filtrarTarefas().map((t) => (
             <li key={t.titulo}>
               <Tarefas
                 id={t.id}
