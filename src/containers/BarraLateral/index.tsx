@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux'
 import FiltroCard from '../../components/FiltroCard'
-import * as S from './styles'
 import { RootState } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
+import * as enums from '../../utils/enums/Tarefa'
+
+import * as S from './styles'
 
 const BarraLateral = () => {
   const dispatch = useDispatch()
@@ -17,12 +19,39 @@ const BarraLateral = () => {
         placeholder="Procurar"
       />
       <S.Filtros>
-        <FiltroCard contador="3" status="pendentes" $ativo />
-        <FiltroCard contador="4" status="concluídas" />
-        <FiltroCard contador="2" status="urgentes" $ativo />
-        <FiltroCard contador="2" status="importantes" />
-        <FiltroCard contador="3" status="normal" />
-        <FiltroCard contador="7" status="todas" />
+        <FiltroCard
+          valor={enums.Status.PENDENTE}
+          criterio="status"
+          contador="3"
+          status="pendentes"
+          $ativo
+        />
+        <FiltroCard
+          valor={enums.Status.CONCLUIDA}
+          criterio="status"
+          contador="4"
+          status="concluídas"
+        />
+        <FiltroCard
+          valor={enums.Prioridade.URGENTE}
+          criterio="prioridade"
+          contador="7"
+          status="urgentes"
+          $ativo
+        />
+        <FiltroCard
+          valor={enums.Prioridade.IMPORTANTE}
+          criterio="prioridade"
+          contador="9"
+          status="importantes"
+        />
+        <FiltroCard
+          valor={enums.Prioridade.NORMAL}
+          criterio="prioridade"
+          contador="3"
+          status="normal"
+        />
+        <FiltroCard criterio="todas" contador="7" status="todas" />
       </S.Filtros>
     </S.Aside>
   )

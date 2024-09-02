@@ -1,4 +1,4 @@
-import * as enums from '../utils/enums/tarefa'
+import * as enums from '../utils/enums/Tarefa'
 
 class Tarefa {
   titulo: string

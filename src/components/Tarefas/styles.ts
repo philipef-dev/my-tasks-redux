@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
-import * as enums from '../../utils/enums/tarefa'
+import * as enums from '../../utils/enums/Tarefa'
 
 export const Card = styled.div`
   padding: 16px;
