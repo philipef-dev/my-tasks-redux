@@ -24,7 +24,6 @@ const BarraLateral = () => {
           criterio="status"
           contador="3"
           status="pendentes"
-          $ativo
         />
         <FiltroCard
           valor={enums.Status.CONCLUIDA}
@@ -37,7 +36,6 @@ const BarraLateral = () => {
           criterio="prioridade"
           contador="7"
           status="urgentes"
-          $ativo
         />
         <FiltroCard
           valor={enums.Prioridade.IMPORTANTE}

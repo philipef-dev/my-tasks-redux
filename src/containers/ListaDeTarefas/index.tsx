@@ -11,12 +11,24 @@ const ListaDeTarefas = () => {
   )
 
   const filtrarTarefas = () => {
+    let tarefasFiltradas = listaDeTarefas
     if (termo) {
-      return listaDeTarefas.filter(
+      tarefasFiltradas = tarefasFiltradas.filter(
         (tarefa) =>
           tarefa.titulo.toLocaleLowerCase().search(termo.toLocaleLowerCase()) >=
           0
       )
+
+      if (criterio === 'prioridade') {
+        tarefasFiltradas = tarefasFiltradas.filter(
+          (tarefa) => tarefa.prioridade === valor
+        )
+      } else if (criterio === 'status') {
+        tarefasFiltradas = tarefasFiltradas.filter(
+          (tarefa) => tarefa.status === valor
+        )
+      }
+      return tarefasFiltradas
     } else {
       return listaDeTarefas
     }
@@ -32,6 +44,8 @@ const ListaDeTarefas = () => {
         <li>{criterio}</li>
         <li>{valor}</li>
       </ul>
+
+      {/* PAREI NO MINUTO 11 */}
 
       <S.ListaDeTarefas>
         <ul>
