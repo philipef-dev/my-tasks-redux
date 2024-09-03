@@ -4,7 +4,7 @@ import Tarefas from '../../components/Tarefas'
 import * as S from './styles'
 
 const ListaDeTarefas = () => {
-  const listaDeTarefas = useSelector((state: RootState) => state.tarefa.itens)
+  const listaDeTarefas = useSelector((state: RootState) => state.tarefas.itens)
 
   const { termo, criterio, valor } = useSelector(
     (state: RootState) => state.filtro
@@ -12,7 +12,7 @@ const ListaDeTarefas = () => {
 
   const filtrarTarefas = () => {
     let tarefasFiltradas = listaDeTarefas
-    if (termo) {
+    if (termo !== undefined) {
       tarefasFiltradas = tarefasFiltradas.filter(
         (tarefa) =>
           tarefa.titulo.toLocaleLowerCase().search(termo.toLocaleLowerCase()) >=
@@ -39,14 +39,6 @@ const ListaDeTarefas = () => {
       <S.Titulo>
         2 tarefas marcadas como: &quot; todas &quot; e &quot; {termo} &quot;
       </S.Titulo>
-      <ul>
-        <li>{termo}</li>
-        <li>{criterio}</li>
-        <li>{valor}</li>
-      </ul>
-
-      {/* PAREI NO MINUTO 11 */}
-
       <S.ListaDeTarefas>
         <ul>
           {filtrarTarefas().map((t) => (
