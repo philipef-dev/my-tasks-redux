@@ -34,10 +34,13 @@ const ListaDeTarefas = () => {
     }
   }
 
+  const tarefas = filtrarTarefas().length
+
   return (
     <S.Container>
       <S.Titulo>
-        2 tarefas marcadas como: &quot; todas &quot; e &quot; {termo} &quot;
+        {tarefas} tarefas marcadas como: &quot; todas &quot; e &quot; {termo}{' '}
+        &quot;
       </S.Titulo>
       <S.ListaDeTarefas>
         <ul>
