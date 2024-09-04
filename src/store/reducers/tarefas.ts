@@ -31,6 +31,14 @@ const initialState: TarefaState = {
       descricao:
         'Deixar o carro pronto para venda se possível documento ok, manutenção ok.',
       id: 3
+    },
+    {
+      titulo: 'Pagar academia',
+      prioridade: enums.Prioridade.URGENTE,
+      status: enums.Status.CONCLUIDA,
+      descricao:
+        'Treinar Treinar Treinar Treinar Treinar Treinar Treinar Treinar Treinar Treinar.',
+      id: 3
     }
   ]
 }
