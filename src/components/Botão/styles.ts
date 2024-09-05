@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Botao = styled.button`
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   cursor: pointer;
   background-color: green;

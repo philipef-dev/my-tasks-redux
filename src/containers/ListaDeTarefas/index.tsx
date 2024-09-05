@@ -71,7 +71,9 @@ const ListaDeTarefas = () => {
           ))}
         </ul>
       </S.ListaDeTarefas>
-      <Botao />
+      <S.Cadastrar>
+        <Botao />
+      </S.Cadastrar>
     </S.Container>
   )
 }
