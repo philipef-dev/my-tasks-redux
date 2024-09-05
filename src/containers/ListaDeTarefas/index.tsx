@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../store'
 import Tarefas from '../../components/Tarefas'
 import * as S from './styles'
+import Botao from '../../components/Botão'
 
 const ListaDeTarefas = () => {
   const listaDeTarefas = useSelector((state: RootState) => state.tarefas.itens)
@@ -70,6 +71,7 @@ const ListaDeTarefas = () => {
           ))}
         </ul>
       </S.ListaDeTarefas>
+      <Botao />
     </S.Container>
   )
 }
