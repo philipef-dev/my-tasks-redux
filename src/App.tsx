@@ -1,8 +1,9 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from './store/index'
-import GlobalStyle, { Container } from './styles'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Pages/Home'
+
+import GlobalStyle, { Container } from './styles'
 
 const rotas = createBrowserRouter([
   {
