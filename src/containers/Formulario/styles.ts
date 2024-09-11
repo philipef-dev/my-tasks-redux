@@ -36,4 +36,10 @@ export const Opcoes = styled.div`
   input {
     margin-right: 1px;
   }
+
+  input:last-of-type {
+    margin-right: 1px;
+    color: red;
+    background-color: red;
+  }
 `
