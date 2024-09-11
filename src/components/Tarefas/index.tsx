@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { remover, editar } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
 import * as S from './styles'
+import { Button, ButtonSave, Descricao } from '../../styles'
 
 type Props = TarefaClass
 
@@ -49,7 +50,7 @@ const Tarefas = ({
       </S.Titulo>
       <S.Tag $prioridade={prioridade}>{prioridade}</S.Tag>
       <S.Tag $status={status}>{status}</S.Tag>
-      <S.Descricao
+      <Descricao
         disabled={!editarTarefa}
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
@@ -57,18 +58,18 @@ const Tarefas = ({
       <S.BarraAcoes>
         {editarTarefa ? (
           <>
-            <S.ButtonSave onClick={editandoTarefa}>Salvar</S.ButtonSave>
+            <ButtonSave onClick={editandoTarefa}>Salvar</ButtonSave>
             <S.ButtonRed onClick={cancelarEdicao}>Cancelar</S.ButtonRed>
           </>
         ) : (
           <>
-            <S.Button
+            <Button
               onClick={() => {
                 setEditarTarefa(true)
               }}
             >
               Editar
-            </S.Button>
+            </Button>
             <S.ButtonRed onClick={() => dispatch(remover(id))}>
               Remover
             </S.ButtonRed>

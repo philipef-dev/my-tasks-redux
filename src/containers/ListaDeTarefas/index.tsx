@@ -2,7 +2,8 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../store'
 import Tarefas from '../../components/Tarefas'
 import * as S from './styles'
-import BotaoAdicionar from '../../components/BotaoAdcionar'
+import BotaoAdicionar from '../../components/BotaoAdicionar'
+import { ContainerMain, Titulo } from '../../styles'
 
 const ListaDeTarefas = () => {
   const listaDeTarefas = useSelector((state: RootState) => state.tarefas.itens)
@@ -54,8 +55,8 @@ const ListaDeTarefas = () => {
   const mensagem = exibeResultadoFiltrado(tarefas.length)
 
   return (
-    <S.Container>
-      <S.Titulo>{mensagem}</S.Titulo>
+    <ContainerMain>
+      <Titulo>{mensagem}</Titulo>
       <S.ListaDeTarefas>
         <ul>
           {filtrarTarefas().map((t) => (
@@ -74,7 +75,7 @@ const ListaDeTarefas = () => {
       <S.Cadastrar>
         <BotaoAdicionar />
       </S.Cadastrar>
-    </S.Container>
+    </ContainerMain>
   )
 }
 
