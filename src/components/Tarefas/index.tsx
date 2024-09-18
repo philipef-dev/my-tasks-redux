@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { remover, editar } from '../../store/reducers/tarefas'
+import { remover, editar, alteraStatus } from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
-import * as S from './styles'
 import { Button, ButtonSave, Descricao } from '../../styles'
+import * as S from './styles'
+import * as enums from '../../utils/enums/Tarefa'
 
 type Props = TarefaClass
 
@@ -15,8 +16,8 @@ const Tarefas = ({
   id
 }: Props) => {
   const dispatch = useDispatch()
-  const [editarTarefa, setEditarTarefa] = useState(false)
 
+  const [editarTarefa, setEditarTarefa] = useState(false)
   const [descricao, setDescricao] = useState('')
 
   useEffect(() => {
@@ -43,11 +44,24 @@ const Tarefas = ({
     setEditarTarefa(false)
   }
 
+  function alterarStatusTarefa(event: ChangeEvent<HTMLInputElement>) {
+    dispatch(alteraStatus({ id, finalizado: event.target.checked }))
+  }
+
   return (
     <S.Card>
-      <S.Titulo>
-        <input type="checkbox" /> {titulo}
-      </S.Titulo>
+      <label htmlFor={titulo}>
+        <input
+          type="checkbox"
+          id={titulo}
+          checked={status === enums.Status.CONCLUIDA}
+          onChange={alterarStatusTarefa}
+        />
+        <S.Titulo>
+          {editarTarefa && <em>Editando: </em>}
+          {titulo}
+        </S.Titulo>
+      </label>
       <S.Tag $prioridade={prioridade}>{prioridade}</S.Tag>
       <S.Tag $status={status}>{status}</S.Tag>
       <Descricao

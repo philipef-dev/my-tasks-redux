@@ -9,6 +9,10 @@ export const Card = styled.div`
   box-shadow: 0px 4px 4px 0px #00000040;
   margin-bottom: 32px;
   border-radius: 0px 0px 16px 16px;
+
+  label {
+    display: flex;
+  }
 `
 
 type TagProps = {
@@ -38,7 +42,7 @@ function retornaCordeFundo({ $status, $prioridade }: TagProps) {
 export const Titulo = styled.h3`
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 14px;
+  margin-left: 10px;
 `
 export const Tag = styled.span<TagProps>`
   padding: 4px 8px;
