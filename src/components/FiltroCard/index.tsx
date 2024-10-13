@@ -13,7 +13,10 @@ export type Props = {
 
 const FiltroCard = ({ status, criterio, valor }: Props) => {
   const dispatch = useDispatch()
-  const { filtro, tarefas } = useSelector((state: RootState) => state)
+  // const { filtro, tarefas } = useSelector((state: RootState) => state)
+
+  const filtro = useSelector((state: RootState) => state.filtro)
+  const tarefas = useSelector((state: RootState) => state.tarefas)
 
   const verificaEstaAtivo = () => {
     const mesmoCriterio = filtro.criterio === criterio
