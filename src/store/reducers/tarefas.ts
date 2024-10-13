@@ -13,23 +13,23 @@ const initialState: TarefaState = {
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
       descricao:
-        'Realizar o teste utilizando redux para controle de estados e stylede componenets para estilização.',
+        'Realizar o teste utilizando redux para controle de estados e utlizando styled componenets para estilização.',
       id: 1
     },
 
     {
-      titulo: 'Finalizar o Resumo da aula sobre Redux',
+      titulo: 'Finalizar o resumo da aula sobre Redux',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
-      descricao: 'Assistir a aulas novamento e fazendo  anotações.',
+      descricao: 'Assistir a aula novamente fazendo  anotações.',
       id: 2
     },
     {
-      titulo: 'Arrumar oq tiver que arrumar no carro até dezembro de 2024',
+      titulo: 'Arrumar o que tiver que arrumar no carro até dezembro de 2024',
       prioridade: enums.Prioridade.URGENTE,
       status: enums.Status.PENDENTE,
       descricao:
-        'Deixar o carro pronto para venda se possível documento ok, manutenção ok.',
+        'Deixar o carro pronto para venda, documento ok, manutenção ok.',
       id: 3
     },
     {
