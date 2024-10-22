@@ -9,7 +9,7 @@ type TarefaState = {
 const initialState: TarefaState = {
   itens: [
     {
-      titulo: 'Terminar o teste tecnico da LiveCode',
+      titulo: 'Terminar o teste tecnico da Live Code',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
       descricao:

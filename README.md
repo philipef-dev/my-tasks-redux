@@ -18,9 +18,9 @@ Segue o link para visualização o projeto - <https://my-tasks-redux.vercel.app/
 
 - [x] Adicionar um nova tarefa
 - [x] Marca essa nova tarefa com prioridade: urgente, importante ou normal
-- [x] Marcar a tarefa como: pendente ou concluída
-- [x] Listar as tarefas por: pendente, conluida, urgente, importante, normal e todas
-- [x] Editar uma tarefa já existente.
+- [x] Marcar a tarefa com status: pendente ou concluída
+- [x] Listar as tarefas por prioridade (urgente, importante ou normal) e por status (pendente ou concluída)
+- [x] Editar uma tarefa já existente
 - [x] Remover uma tarefa
 
 ## Tecnologias
@@ -35,7 +35,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 ## Como executar
 
 <br>
-Clone o projeto e acesse a pasta do mesmo.
+Clone o projeto e acesse a pasta do mesmo
 <br>
 <br>
 
