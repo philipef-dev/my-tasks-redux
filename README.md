@@ -5,8 +5,8 @@
 [Projeto](#projeto) -
 [Funcionalidades](#funcionalidades) -
 [Tecnlogias](#tecnologias) -
-[Como executar](#como-executar)
-[Vídeo](#video)
+[Como executar](#como-executar) -
+[Vídeo](#vídeo)
 </h3>
 
 ## Projeto
