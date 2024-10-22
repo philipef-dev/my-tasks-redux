@@ -5,7 +5,8 @@
 [Projeto](#projeto) -
 [Funcionalidades](#funcionalidades) -
 [Tecnlogias](#tecnologias) -
-[Como executar](#como-executar)
+[Como executar](#como-executar) -
+[Vídeo](#vídeo)
 </h3>
 
 ## Projeto
@@ -55,6 +56,12 @@ $ npm install
 $ npm start
 
 ```
+
+## Vídeo
+
+
+https://github.com/user-attachments/assets/e4c115f6-de09-4278-8ac9-c1e761a33f2a
+
 
 <h2 id="license">📝 Licença</h2>
 
