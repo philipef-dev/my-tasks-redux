@@ -17,6 +17,7 @@ Segue o link para visualização o projeto - <https://my-tasks-redux.vercel.app/
 ## Funcionalidades
 
 - [x] Adicionar um nova tarefa
+- [x] Pesquisar uma tarefa já adicionada pelo nome
 - [x] Marca essa nova tarefa com prioridade: urgente, importante ou normal
 - [x] Marcar a tarefa com status: pendente ou concluída
 - [x] Listar as tarefas por prioridade (urgente, importante ou normal) e por status (pendente ou concluída)
