@@ -11,7 +11,7 @@
 
 ## Projeto
 
-Este projeto pessoal foi desenvolvido com o intuito de praticar tudo o que venho aprendendo ao longo deste ano, em busca de fluência em React.js e gerenciamento de estado utilizando Redux. Trata-se de uma to-do list com várias funcionalidades, totalmente responsiva, onde todo o layout foi criado utilizando Styled Components.
+Este projeto foi desenvolvido com o intuito de praticar tudo o que venho aprendendo ao longo deste ano, em busca de fluência em React.js e gerenciamento de estado utilizando Redux. Trata-se de uma to-do list com várias funcionalidades, totalmente responsiva, onde todo o layout foi criado utilizando Styled Components.
 
 Segue o link para visualização o projeto - <https://my-tasks-redux.vercel.app>
 
