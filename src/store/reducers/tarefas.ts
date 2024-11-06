@@ -9,7 +9,7 @@ type TarefaState = {
 const initialState: TarefaState = {
   itens: [
     {
-      titulo: 'Terminar o teste tecnico da LiveCode',
+      titulo: 'Terminar o teste técnico da Live Code',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
       descricao:
@@ -21,7 +21,7 @@ const initialState: TarefaState = {
       titulo: 'Finalizar o resumo da aula sobre Redux',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
-      descricao: 'Assistir a aula novamente fazendo  anotações.',
+      descricao: 'Assistir a aula novamente fazendo anotações.',
       id: 2
     },
     {
