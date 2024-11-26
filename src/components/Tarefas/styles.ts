@@ -50,7 +50,8 @@ export const Tag = styled.span<TagProps>`
   background-color: ${(props) => retornaCordeFundo(props)};
   font-size: 10px;
   font-weight: 700;
-  margin-right: 16px;
+  margin-top: 8px;
+  margin-right: 8px;
   color: #fff;
   display: inline-block;
 `
