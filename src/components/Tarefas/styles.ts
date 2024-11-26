@@ -60,6 +60,14 @@ export const BarraAcoes = styled.div`
   border-radius: 0px 0px 16px 16px;
   padding: 16px 16px 0px 0px;
 `
+export const AlterarPrioridade = styled.div`
+  display: flex;
+  font-size: 14px;
+  gap: 4px;
+  margin-bottom: 12px;
+  align-items: center;
+`
+
 export const ButtonRed = styled(Button)`
   background-color: ${variaveis.red};
 `

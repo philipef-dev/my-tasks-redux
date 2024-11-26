@@ -34,7 +34,7 @@ const initialState: TarefaState = {
     },
     {
       titulo: 'Pagar academia',
-      prioridade: enums.Prioridade.URGENTE,
+      prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
       descricao: 'Treinar Treinar Treinar Treinar Treinar.',
       id: 4
@@ -87,9 +87,22 @@ const tarefaSlice = createSlice({
           ? enums.Status.CONCLUIDA
           : enums.Status.PENDENTE
       }
+    },
+    alteraPrioridade: (
+      state,
+      action: PayloadAction<{ id: number; prioridade: enums.Prioridade }>
+    ) => {
+      const indexDaTarefa = state.itens.findIndex(
+        (t) => t.id === action.payload.id
+      )
+
+      if (indexDaTarefa >= 0) {
+        state.itens[indexDaTarefa].prioridade = action.payload.prioridade
+      }
     }
   }
 })
 
-export const { remover, editar, cadastar, alteraStatus } = tarefaSlice.actions
+export const { remover, editar, cadastar, alteraStatus, alteraPrioridade } =
+  tarefaSlice.actions
 export default tarefaSlice.reducer

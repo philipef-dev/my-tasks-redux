@@ -1,6 +1,11 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { remover, editar, alteraStatus } from '../../store/reducers/tarefas'
+import {
+  remover,
+  editar,
+  alteraStatus,
+  alteraPrioridade
+} from '../../store/reducers/tarefas'
 import TarefaClass from '../../models/Tarefa'
 import { Button, ButtonSave, Descricao } from '../../styles'
 import * as S from './styles'
@@ -48,6 +53,11 @@ const Tarefas = ({
     dispatch(alteraStatus({ id, finalizado: event.target.checked }))
   }
 
+  function alterarPrioridadeTarefa(event: ChangeEvent<HTMLSelectElement>) {
+    const novaPrioridade = event.target.value as enums.Prioridade
+    dispatch(alteraPrioridade({ id, prioridade: novaPrioridade }))
+  }
+
   return (
     <S.Card>
       <label htmlFor={titulo}>
@@ -69,6 +79,20 @@ const Tarefas = ({
         value={descricao}
         onChange={(e) => setDescricao(e.target.value)}
       />
+
+      {editarTarefa && (
+        <S.AlterarPrioridade>
+          <p>Alterar prioridade: </p>
+          <select value={prioridade} onChange={alterarPrioridadeTarefa}>
+            {Object.values(enums.Prioridade).map((opcao) => (
+              <option key={opcao} value={opcao}>
+                {opcao}
+              </option>
+            ))}
+          </select>
+        </S.AlterarPrioridade>
+      )}
+
       <S.BarraAcoes>
         {editarTarefa ? (
           <>
